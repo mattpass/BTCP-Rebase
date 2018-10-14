@@ -63,7 +63,7 @@ Towards the end of the build it will inform you that you haven't yet added the Z
 Config
 ------
 
-You can add parameters such as `-testnet` and `-daemon` when running the Bitcoin Private daemon in the next step, however, you may want to add these (eg `testnet=1` and `daemon=1`) to the config file in `btcp.conf` so there is no need to add as parameters on the command line each time you run the daemon and a useful place to add nodes using `addnode=<node ip>`
+You can add parameters such as `-testnet` and `-daemon` when running the Bitcoin Private daemon, however, you may want to add these (eg `testnet=1` and `daemon=1`) to the config file in `btcp.conf` so there is no need to add as parameters on the command line each time you run the daemon and a useful place to add nodes using `addnode=<node ip>`
 
 Networks
 ------
