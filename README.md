@@ -109,7 +109,7 @@ The IP for the official BTCP testnet you can add as a node is **209.97.137.47** 
 Testnet BTCP coins
 ------
 
-You can mine Bitcoin Private in order to generate coins to perform transactions with, but there is also a faucet repo at https://github.com/ch4ot1c/zfaucet where you can get BTCP also. 
+You can mine Bitcoin Private in order to generate coins to perform transactions with, but there is also a faucet repo at https://github.com/ch4ot1c/zfaucet where you can get BTCP also. Note however this repo is under development.
 
 Low RAM Servers/Machines
 ------
