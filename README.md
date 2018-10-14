@@ -118,7 +118,7 @@ Due to the nature of the blockchain, it can be a little memory intensive when bu
 
 ```
 cd /
-sudo dd if=/dev/zero of=swapfile bs=1M count=$1
+sudo dd if=/dev/zero of=swapfile bs=1M count=3072
 sudo mkswap swapfile
 sudo chmod 0600 /swapfile
 sudo swapon swapfile
