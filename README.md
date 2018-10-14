@@ -102,7 +102,9 @@ To use RPC methods via the CLI, you can call upon this (and pass `help` to it fo
 Testing
 ------
 
-There are many tests available from within the `tests` dir to help validate that everything works as expected, necessary if you make changes to this repos codebase or wish to confirm something is working correctly. 
+There are many tests available from within the `tests` dir to help validate that everything works as expected, necessary if you make changes to this repos codebase or wish to confirm something is working correctly.
+
+The IP for the official BTCP testnet you can add as a node is **209.97.137.47** plus there is also a web interface at https://testnet.btcprivate.org if you wish to try some RPC commands there as a quick test. 
 
 Testnet BTCP coins
 ------
