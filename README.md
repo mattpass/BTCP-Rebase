@@ -58,7 +58,7 @@ There are few build options you can also use:
 ZCash Ceremony
 ------
 
-Towards the end of the build it will inform you that you haven't yet added the ZCash ceremony and provide the command to use to download and apply this. It also notes the extra `-testnet` param to use with this if you wish to run a testnet rather than mainnet.
+Towards the end of the build it will inform you that you haven't yet added the ZCash ceremony and provide the command to use to download and apply this. It also notes the extra `-testnet` param to use with this if you wish to connect to our testnet rather than mainnet.
 
 Config
 ------
