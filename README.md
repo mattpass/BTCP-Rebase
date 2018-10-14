@@ -12,7 +12,7 @@ What is the Bitcoin Private Rebase?
 
 Bitcoin Private is currently based primarily on the Zcash codebase, which itself is a snapshot of Bitcoin dating to mid-2015. Most z protocol coins all rely on this same code, which is now missing roughly 3 years of blockchain upgrades that have been integrated into Bitcoin. Based on the structure of Zcash, and because there’s now a 3 year code divergence, integrating blockchain upgrades developed in bitcoin core into any z protocol coin has become increasingly cumbersome.
 
-We endeavor a complete refactoring of Bitcoin Private to allow for more facile incorporation of Bitcoin upstream changes. This release will coincide with activation of full SegWit support, giving the BTCP more scale both on chain as well as enabling off-chain protocols such as the lightning network and cross-chain swaps. Additionally, it will bring another 3 years of upgrades to the core node including stability and speed improvements as well as a number of usability enhancements to the reference wallet including support for hierarchical deterministic wallets (for shielded and transparent addresses) and wallet encryption.
+We endeavor a complete refactoring of Bitcoin Private to allow for more facile incorporation of Bitcoin upstream changes. This release will coincide with activation of full SegWit support, giving the BTCP more scale both on chain as well as enabling off-chain protocols such as the lightning network and cross-chain swaps. Additionally, it will bring another 3 years of upgrades to the core node including stability and speed improvements as well as a number of usability enhancements to the reference wallet including support for hierarchical deterministic wallets (for shielded and transparent addresses) and wallet encryption. The algorithm used is Equihash 192,7 which is similar to 144,5 but ASIC mining hardware is not geared towards hashing against this, so is ASIC resistant and puts the mining back in GPU miners hands.
 
 Learn more about Bitcoin Private and the rebase at https://btcprivate.org.
 
@@ -63,7 +63,7 @@ Towards the end of the build it will inform you that you haven't yet added the Z
 Config
 ------
 
-You can add parameters such as `-testnet` and `-daemon` when running the Bitcoin Private daemon, however, you may want to add these (eg `testnet=1` and `daemon=1`) to the config file in `btcp.conf` so there is no need to add as parameters on the command line each time you run the daemon and a useful place to add nodes using `addnode=<node ip>`
+You can add parameters such as `-testnet` and `-daemon` when running the Bitcoin Private daemon, however, you may want to add these (eg `testnet=1` and `daemon=1`) to the config file in your home dir at `~/.btcp/bitcoin.conf` so there is no need to add as parameters on the command line each time you run the daemon and a useful place to add nodes using `addnode=<node ip>`. You can also find blockchain data such as the current blocks, chainstate, wallets, networks you've run and more in this the `~/.btcp` dir.  
 
 Networks
 ------
