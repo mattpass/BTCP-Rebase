@@ -111,6 +111,21 @@ Testnet BTCP coins
 
 You can mine Bitcoin Private in order to generate coins to perform transactions with, but there is also a faucet repo at https://github.com/ch4ot1c/zfaucet where you can get BTCP also. 
 
+Low RAM Servers/Machines
+------
+
+Due to the nature of the blockchain, it can be a little memory intensive when building or mining (for both, 1GB RAM and a reasonly good CPU should be fine), but a solution where that isn't available is to use swapspace when you run out of RAM:
+
+```
+cd /
+sudo dd if=/dev/zero of=swapfile bs=1M count=$1
+sudo mkswap swapfile
+sudo chmod 0600 /swapfile
+sudo swapon swapfile
+echo "/swapfile none swap sw 0 0" | sudo tee -a etc/fstab > /dev/null
+cd ~
+```
+
 Notes
 -------
 
