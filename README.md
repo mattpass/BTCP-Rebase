@@ -5,7 +5,7 @@ Bitcoin Private (Rebase)
 
 IN DEVELOPMENT - FOR TESTING ONLY - DO NOT USE IN PRODUCTION
 ===========
-This is currently in development software, not all consensus rules have been implemented. **You should NOT rely on this in production yet**, for production use cases please use https://github.com/BTCPrivate/BitcoinPrivate/
+This is currently in development, not all consensus rules have been implemented. **You should NOT rely on this in production yet**, for production use cases please use https://github.com/BTCPrivate/BitcoinPrivate/
 
 What is the Bitcoin Private Rebase?
 ----------------
@@ -63,15 +63,29 @@ Towards the end of the build it will inform you that you haven't yet added the Z
 Config
 ------
 
-You can add parameters such as `-testnet` and `-daemon` when running the Bitcoin Private daemon in the next step, however, you may want to add these (eg `testnet=1` and `daemon=1`) to the config file in btcp.conf so there is no need to add as parameters on the command line each time
+You can add parameters such as `-testnet` and `-daemon` when running the Bitcoin Private daemon in the next step, however, you may want to add these (eg `testnet=1` and `daemon=1`) to the config file in `btcp.conf` so there is no need to add as parameters on the command line each time you run the daemon and a useful place to add nodes using `addnode=<node ip>`
 
 Networks
 ------
 
 There are 3 main networks:
-`regtest` provides an self contained testnet for the server/machine you are running on at present, ideal if you don't need to connect to external nodes.
-`testnet` is the testnet but we allow external nodes to connect to this node and form part of a network.
-`mainnet` is the main network ready for production use.
+- `regtest` provides a self contained testnet for the server/machine you are running on at present, ideal if you don't need to connect to external nodes.
+- `testnet` is the testnet but we allow external nodes to connect to this node and form part of a network.
+- `mainnet` is the main network ready for production use.
+
+Ports
+------
+If you wish to run the daemon under `testnet` or `mainnet` chains, you may need to open up your firewall rules on the server/machine (also check any firewalls your hosting provider may have in place). The ports are:
+
+**testnet**
+- 17932 = rpc port
+- 17933 = p2p port
+
+**mainnet**
+- 7932 = rpc port
+- 7933 = p2p port
+
+You can open the relevant port up using `sudo ufw allow <num>/tcp`
 
 Running the Daemon
 ------
@@ -90,10 +104,20 @@ Testing
 
 There are many tests available from within the `tests` dir to help validate that everything works as expected, necessary if you make changes to this repos codebase or wish to confirm something is working correctly. 
 
+Testnet BTCP coins
+------
+
+You can mine Bitcoin Private in order to generate coins to perform transactions with, but there is also a faucet repo at https://github.com/ch4ot1c/zfaucet where you can get BTCP also. 
+
 Notes
 -------
 
-The build typically takes 30-45 minutes depending on your server/machine. There will be a significant slowdown in blocks being validated from 272991 for a around 5000 blocks, as these are far larger blocks created around the time of the snapshot.
+The build typically takes 30-45 minutes depending on your server/machine. There will be a significant slowdown in blocks being validated from 272991 for around 5000 blocks, as these are far larger blocks created around the time of the snapshot and far greater processing is needed on these.
+
+Bug Reports
+-------
+
+We would greatly appreciate any bug reports and development to help further improve and fix any issues on this codebase. In all cases it is best to raise a GitHub issue for bugs and put in a pull request for any fixes you provide. We can review and discuss changes before merging into master branch. 
 
 License
 -------
