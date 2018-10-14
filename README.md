@@ -58,7 +58,7 @@ There are few build options you can also use:
 ZCash Ceremony
 ------
 
-Towards the end of the build it will inform you that you haven't yet added the ZCash ceremony and provide the command to use to download and apply this. It also notes the extra `-testnet` param to use with this if you wish to connect to our testnet rather than mainnet.
+Towards the end of the build it will inform you that you haven't yet added the ZCash ceremony and need to run `./scripts/fetch-zcash-params.sh` to download and apply this. It also notes the extra `-testnet` param to use with this if you wish to connect to our testnet rather than mainnet.
 
 Config
 ------
@@ -70,8 +70,8 @@ Networks
 
 There are 3 main networks:
 - `regtest` provides a self contained testnet for the server/machine you are running on at present, ideal if you don't need to connect to external nodes.
-- `testnet` is the testnet but we allow external nodes to connect to this node and form part of a network.
-- `mainnet` is the main network ready for production use.
+- `testnet` connects to the test network for testing purposes only.
+- `mainnet` connects to the main network ready for production use.
 
 Ports
 ------
@@ -104,7 +104,7 @@ Testing
 
 There are many tests available from within the `tests` dir to help validate that everything works as expected, necessary if you make changes to this repos codebase or wish to confirm something is working correctly.
 
-The IP for the official BTCP testnet you can add as a node is **209.97.137.47** plus there is also a web interface at https://testnet.btcprivate.org if you wish to try some RPC commands there as a quick test. 
+The IP for the official BTCP testnet is **209.97.137.47** plus there is also a web interface at https://testnet.btcprivate.org if you wish to try some RPC commands there as a quick test. 
 
 Testnet BTCP coins
 ------
